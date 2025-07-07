@@ -10,7 +10,7 @@ import pandas as pd
 
 # Path to the folder containing the indiviudal csv files
 
-csv_folder = r"C:\Users\dcook\OneDrive - Defenders of Wildlife\Desktop\csv_outputs"
+csv_folder = r"C:\Users\dcook\OneDrive - Defenders of Wildlife\Desktop\recovery_project\csv_outputs"
 combined_data = []
 
 # loop through all csvs named like entity_x.csv
