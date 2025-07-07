@@ -20,7 +20,7 @@ from urllib.parse import urlparse, parse_qs # Allows the script to extract parts
 
 
 # Set up Chrome options
-download_dir = r"C:\Users\dcook\OneDrive - Defenders of Wildlife\Desktop\csv_outputs" # sets download_dir as the absolute path to the csv_outputs folder
+download_dir = r"C:\Users\dcook\OneDrive - Defenders of Wildlife\Desktop\recovery_project\csv_outputs" # sets download_dir as the absolute path to the csv_outputs folder
 # ensures the path is valid and fully resolved regardless of where the script is run
 options = Options() # Creates an Options object to customize Chrome behavior 
 options.add_experimental_option("detach", True)  # Keep browser open after script ends
@@ -46,7 +46,7 @@ driver = webdriver.Chrome(service=service, options=options)
 os.makedirs(download_dir, exist_ok=True)
 
 # Sample entity IDs (you can adjust this list as needed)
-entity_ids = [8472, 8470, 1134, 9866, 8080]  # Add more as needed
+entity_ids = [5895, 8256, 2212, 1392, 1392]  # Add more as needed
 
 # === Main Script ===
 # Begins a loop that processes each entityId from the entity_ids list
@@ -182,7 +182,7 @@ print("\nAll done. Check the 'csv_outputs' folder.")
 
 
 # run the second script after download completes
-combine_script_path = os.path.abspath("C:\\Users\\dcook\\OneDrive - Defenders of Wildlife\\Desktop\\combine_entities.py")
+combine_script_path = os.path.abspath("C:\\Users\\dcook\\OneDrive - Defenders of Wildlife\\Desktop\\recovery_project\\combine_entities.py")
 subprocess.run(["python", combine_script_path], check=True)
 
 
